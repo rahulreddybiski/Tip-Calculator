@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <h3>Tipsy</h3>
+    </div>
+
+    <div class="showcase">
+        <section class="totalbill">
+            <form action="" class="total-bill">
+                <label for="billtotal">Enter bill total</label>
+                <input 
+                id="billtotal"
+                type="text" 
+                placeholder="$0.0">
+            </form>
+        </section>
+
+        <!-- choosetip section -->
+        <section class="choose-tip">
+            <h3>Choose tip</h3>
+            <div class="tip-percentages">
+                <button class="btn">10%</button>
+                <button class="btn">15%</button>
+                <button class="btn">20%</button>
+                <button class="btn">25%</button>
+                <button class="btn">30%</button>
+                <button class="btn">50%</button>
+            </div>
+        </section>
+
+        <!-- section split -->
+        <section class="split">
+            <h3>split</h3>
+            <div class="split-bill">
+            <button class="button plus" id="plus">+</button>
+            <p class="text-label">0</p>
+            <button class="button minus" id="minus">-</button>
+            </div>
+            
+            <div class="calculate">
+                <button class="calculatebill">Calculate Bill</button>
+            </div>
+
+
+        </section>
+
+        <!-- section billperperson -->
+        <section class="perpersonbill">
+            <h3>Bill per person</h3>
+            <input type="text" class="perperson" id="billperperson">
+        </section>
+
+    
+    </div>
+
+</body>
+</html>
