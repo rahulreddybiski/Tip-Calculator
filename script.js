@@ -4,7 +4,7 @@ const plus = document.querySelector('#plus')
 const minus = document.querySelector('#minus')
 const persons = document.querySelector('.text-label')
 const perPerson = document.querySelector('#billperperson')
-
+const perPersonBill = document.querySelector(".perpersonbill");
 const calculateBill = document.querySelector('.calculatebill')
 let ourValue;
 
@@ -21,9 +21,14 @@ function chooseTip(){
     chooseTipPercentage.forEach(tipvalue => {
         tipvalue.addEventListener('click', () => {
             //console.log(parseInt(tipvalue.innerText))
+            // if(tipvalue.clicked == true){
+            tipvalue.disabled = true;
+            
             tipvalue.style.backgroundColor = 'salmon'
             //console.log(parseInt(tipvalue.innerText))
             ourValue = parseInt(tipvalue.innerText);
+            //}
+           
         }) 
     })
 }
@@ -70,12 +75,17 @@ calculateBill.addEventListener('click', () => {
     let tipPercentage = ourValue;
     let totalPersons = parseInt(persons.innerText);
 
+    if(totalPersons == 0){
+        alert("0 persons is not accepted, please change the value")
+        
+    } 
+    else{
     let totalTip = (parseInt(userTotalBill) * (tipPercentage/100));
     console.log(totalTip)
-    let billPerPerson = (parseInt(userTotalBill) + parseInt(totalTip))/totalPersons
+    let billPerPerson = (parseInt(userTotalBill) + parseInt(totalTip))/totalPersons;
 
     
     perPerson.value = `${billPerPerson} $`;
-
+    }
 
 })
